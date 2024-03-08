@@ -1,13 +1,37 @@
+html,
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    height: 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+    width: 100%;
+    min-width: 320px;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+    margin: 0;
+}
+
+div {
+    display: flex;
+}
+
+@font-face {
+    font-family: "PassionOneBold";
+    src: local("PassionOneBold"),
+    url("./fonts/PassionOne-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-stretch: 190%;
+}
+
+@font-face {
+    font-family: "PassionOneRegular";
+    src: local("PassionOneRegular"),
+    url("./fonts/PassionOne-Regular.ttf") format("truetype");
 }
