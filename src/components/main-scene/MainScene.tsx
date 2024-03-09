@@ -16,11 +16,11 @@ export const MainScene = () => {
             <div className={styles.container}>
                 <div/>
                 <Trail/>
-                <div onMouseEnter={onMouseEnter}
+                <div className={styles.scroll_down}
+                     onMouseEnter={onMouseEnter}
                      onMouseLeave={onMouseLeave}
                      onClick={handleClick}>
                     <Player src={'./scroll down.json'}
-                            className={styles.scroll_down}
                             autoplay={true}
                             loop={true}/>
                 </div>
