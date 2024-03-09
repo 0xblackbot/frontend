@@ -2,14 +2,3 @@
     width: 100%;
     flex-direction: column;
 }
-
-.content_container {
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-}
-
-.trail_container {
-    flex-direction: column;
-    justify-content: space-around;
-}
