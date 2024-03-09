@@ -8,6 +8,7 @@
 
 .container_black {
     background-color: var(--black-color);
+    justify-content: space-around;
 }
 
 .info_text {
@@ -21,4 +22,22 @@
 
 .info_text_white {
     color: var(--white-color);
+}
+
+.contacts_container {
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: 500px) {
+        flex-direction: row;
+    }
+}
+
+.contacts_button {
+    color: var(--white-color);
+    font-family: 'PassionOneBold';
+    font-size: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 8px;
 }

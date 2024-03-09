@@ -1,9 +1,10 @@
-import React from "react";
+import React, {FC} from "react";
 
 import styles from './Info.module.css';
 import {getClassName} from "../../utils/style.utils";
+import {ChangeCursorVariantProps} from "../../hooks/use-cursor-variant.hook";
 
-export const Info = () => {
+export const Info: FC<ChangeCursorVariantProps> = ({onMouseEnter, onMouseLeave}) => {
     return (
         <>
             <div className={styles.container}>
@@ -12,9 +13,28 @@ export const Info = () => {
                 </p>
             </div>
             <div className={getClassName(styles.container, styles.container_black)}>
+                <div/>
                 <p className={getClassName(styles.info_text, styles.info_text_white)}>
                     Contact us for inquiries or collaboration opportunities
                 </p>
+                <div className={styles.contacts_container}>
+                    <p className={styles.contacts_button}
+                       onMouseEnter={onMouseEnter}
+                       onMouseLeave={onMouseLeave}>
+                        Email
+                    </p>
+                    <p className={styles.contacts_button}
+                       onMouseEnter={onMouseEnter}
+                       onMouseLeave={onMouseLeave}>
+                        Telegram
+                    </p>
+                    <p className={styles.contacts_button}
+                       onMouseEnter={onMouseEnter}
+                       onMouseLeave={onMouseLeave}>
+                        X
+                    </p>
+                </div>
+                <div/>
             </div>
         </>
     );
