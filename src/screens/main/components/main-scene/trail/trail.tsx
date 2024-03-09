@@ -1,6 +1,7 @@
-import React, {useCallback, useRef} from "react";
-import styles from './trail.module.css';
 import {animated, useTrail} from "@react-spring/web";
+import React, {useCallback, useRef} from "react";
+
+import styles from './trail.module.css';
 import {useCursorVariant} from "../../../../../hooks/cursor-variant/cursor-variant.hook";
 
 const LETTERS = ['B', 'L', 'A', 'C', 'K', 'B', 'O', 'T'];
@@ -41,7 +42,7 @@ export const Trail = () => {
                         className={styles.box_front}
                         style={{
                             transform: rotateX.to(val => `perspective(600px) rotateX(${val}deg)`),
-                            transformStyle: 'preserve-3d',
+                            transformStyle: 'preserve-3d'
                         }}>
                         {'?'}
                     </animated.div>
@@ -49,7 +50,7 @@ export const Trail = () => {
                         className={styles.box_back}
                         style={{
                             transform: rotateX.to(val => `perspective(600px) rotateX(${180 - val}deg)`),
-                            transformStyle: 'preserve-3d',
+                            transformStyle: 'preserve-3d'
                         }}>
                         {LETTERS[i]}
                     </animated.div>

@@ -1,5 +1,6 @@
-import React, {useRef} from "react";
 import {Player} from "@lottiefiles/react-lottie-player";
+import React, {useRef} from "react";
+
 import styles from "./main-scene.module.css";
 import {Trail} from "./trail/trail";
 import {useCursorVariant} from "../../../../hooks/cursor-variant/cursor-variant.hook";

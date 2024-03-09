@@ -1,9 +1,10 @@
 import React from "react";
 import {isDesktop} from "react-device-detect";
-import {Cursor} from "../cursor/cursor";
 import {Outlet, ScrollRestoration} from "react-router-dom";
-import {Footer} from "../footer/footer";
+
 import styles from "./layout.module.css";
+import {Cursor} from "../cursor/cursor";
+import {Footer} from "../footer/footer";
 
 export const Layout = () => (
     <div className={styles.container}>

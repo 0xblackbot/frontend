@@ -1,4 +1,5 @@
 import {createContext} from "react";
+
 import {CursorTypeEnum} from "../../enums/cursor-type.enum";
 
 interface CursorVariantContextValues {

@@ -1,9 +1,9 @@
 import React from "react";
 import {Link} from "react-router-dom";
 
-import {getClassName} from "../../utils/style.utils";
-import {useCursorVariant} from "../../hooks/cursor-variant/cursor-variant.hook";
 import styles from './footer.module.css';
+import {useCursorVariant} from "../../hooks/cursor-variant/cursor-variant.hook";
+import {getClassName} from "../../utils/style.utils";
 
 export const Footer = () => {
     const {onMouseEnter, onMouseLeave} = useCursorVariant();

@@ -1,5 +1,6 @@
-import React, {useEffect, useState} from "react";
 import {motion, Variants} from "framer-motion";
+import React, {useEffect, useState} from "react";
+
 import styles from "./cursor.module.css";
 import {CursorTypeEnum} from "../../enums/cursor-type.enum";
 import {useCursorVariant} from "../../hooks/cursor-variant/cursor-variant.hook";
@@ -41,7 +42,7 @@ export const Cursor = () => {
             y: mousePosition.y -
                 (
                     SMALL_SIZE / 2
-                ),
+                )
         },
         [CursorTypeEnum.action]: {
             width: BIG_SIZE,

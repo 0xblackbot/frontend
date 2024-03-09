@@ -1,7 +1,7 @@
-import {CONTACTS_EMAIL} from "../../data";
+import {Container} from "../../components/container/container";
 import {Heading} from "../../components/heading/heading";
 import {Text} from "../../components/text/text";
-import {Container} from "../../components/container/container";
+import {CONTACTS_EMAIL} from "../../data";
 
 export const TermsAndConditionScreen = () => (
     <Container>

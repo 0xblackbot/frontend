@@ -1,11 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import reportWebVitals from './reportWebVitals';
-import {CursorVariantProvider} from "./hooks/cursor-variant/cursor-variant.provider";
-import {App} from "./App";
+import {createRoot} from 'react-dom/client';
 
-const root = ReactDOM.createRoot(
+import './index.css';
+import {App} from "./App";
+import {CursorVariantProvider} from "./hooks/cursor-variant/cursor-variant.provider";
+import reportWebVitals from './reportWebVitals';
+
+const root = createRoot(
     document.getElementById('root') as HTMLElement
 );
 root.render(
