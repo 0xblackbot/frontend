@@ -11,6 +11,7 @@
 }
 
 .info_text {
+    max-width: var(--max-content-width);
     margin: 0;
     color: var(--black-color);
     font-family: 'PassionOneBold';

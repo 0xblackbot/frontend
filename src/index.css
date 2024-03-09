@@ -8,6 +8,7 @@ body {
     --white-color: #fafafa;
     --yellow-color: #fbf588;
     --blue-color: #61609a;
+    --max-content-width: 632px;
 
     width: 100%;
     min-width: 320px;
