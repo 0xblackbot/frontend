@@ -4,10 +4,6 @@ import styles from './Footer.module.css';
 import {getClassName} from "../../utils/style.utils";
 import {useCursorVariant} from "../../hooks/cursor-variant/cursor-variant.hook";
 
-// <p>Email: info.blackbot@gmail.com</p>
-// <p>Telegram: +380 68 809 2880</p>
-// <p>X: @0xblackbot</p>
-
 export const Footer = () => {
     const {onMouseEnter, onMouseLeave}= useCursorVariant();
 

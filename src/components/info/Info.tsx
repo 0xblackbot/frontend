@@ -3,6 +3,11 @@ import React from "react";
 import styles from './Info.module.css';
 import {getClassName} from "../../utils/style.utils";
 import {useCursorVariant} from "../../hooks/cursor-variant/cursor-variant.hook";
+import {CONTACTS_EMAIL, CONTACTS_TELEGRAM, CONTACTS_X} from "../../data";
+
+const EMAIL_LINK = `mailto:${CONTACTS_EMAIL}`;
+const TELEGRAM_LINK = `https://t.me/${CONTACTS_TELEGRAM}`;
+const X_LINK = `https://x.com/${CONTACTS_X}`;
 
 export const Info = () => {
     const {onMouseEnter, onMouseLeave} = useCursorVariant();
@@ -20,21 +25,27 @@ export const Info = () => {
                     Contact us for inquiries or collaboration opportunities
                 </p>
                 <div className={styles.contacts_container}>
-                    <p className={styles.contacts_button}
+                    <a className={styles.contacts_button}
+                       href={EMAIL_LINK}
+                       target="_blank"
                        onMouseEnter={onMouseEnter}
                        onMouseLeave={onMouseLeave}>
                         Email
-                    </p>
-                    <p className={styles.contacts_button}
+                    </a>
+                    <a className={styles.contacts_button}
+                       href={TELEGRAM_LINK}
+                       target="_blank"
                        onMouseEnter={onMouseEnter}
                        onMouseLeave={onMouseLeave}>
                         Telegram
-                    </p>
-                    <p className={styles.contacts_button}
+                    </a>
+                    <a className={styles.contacts_button}
+                       href={X_LINK}
+                       target="_blank"
                        onMouseEnter={onMouseEnter}
                        onMouseLeave={onMouseLeave}>
                         X
-                    </p>
+                    </a>
                 </div>
                 <div/>
             </div>

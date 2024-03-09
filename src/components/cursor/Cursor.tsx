@@ -5,7 +5,7 @@ import {CursorTypeEnum} from "../../enums/cursor-type.enum";
 import {useCursorVariant} from "../../hooks/cursor-variant/cursor-variant.hook";
 
 const SMALL_SIZE = 32;
-const BIG_SIZE = 96;
+const BIG_SIZE = 72;
 
 export const Cursor = () => {
     const {cursorVariant} = useCursorVariant();
