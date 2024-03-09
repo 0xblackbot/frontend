@@ -1,6 +1,6 @@
 import React from "react";
 
-import styles from './Info.module.css';
+import styles from './info.module.css';
 import {CONTACTS_EMAIL, CONTACTS_TELEGRAM, CONTACTS_X} from "../../../../data";
 import {useCursorVariant} from "../../../../hooks/cursor-variant/cursor-variant.hook";
 import {getClassName} from "../../../../utils/style.utils";

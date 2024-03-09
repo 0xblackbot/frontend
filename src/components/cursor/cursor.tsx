@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {motion, Variants} from "framer-motion";
-import styles from "./Cursor.module.css";
+import styles from "./cursor.module.css";
 import {CursorTypeEnum} from "../../enums/cursor-type.enum";
 import {useCursorVariant} from "../../hooks/cursor-variant/cursor-variant.hook";
 

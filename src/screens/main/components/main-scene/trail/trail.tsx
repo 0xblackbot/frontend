@@ -1,5 +1,5 @@
 import React, {useCallback, useRef} from "react";
-import styles from './Trail.module.css';
+import styles from './trail.module.css';
 import {animated, useTrail} from "@react-spring/web";
 import {useCursorVariant} from "../../../../../hooks/cursor-variant/cursor-variant.hook";
 

@@ -1,6 +1,6 @@
 import React from "react";
-import {MainScene} from "./components/main-scene/MainScene";
-import {Info} from "./components/info/Info";
+import {MainScene} from "./components/main-scene/main-scene";
+import {Info} from "./components/info/info";
 
 export const MainScreen = () => {
     return (
