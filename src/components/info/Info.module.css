@@ -1,0 +1,23 @@
+.container {
+    height: 100vh;
+    padding: 24px 16px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_black {
+    background-color: var(--black-color);
+}
+
+.info_text {
+    margin: 0;
+    color: var(--black-color);
+    font-family: 'PassionOneBold';
+    font-size: 60px;
+    line-height: 0.8;
+}
+
+.info_text_white {
+    color: var(--white-color);
+}

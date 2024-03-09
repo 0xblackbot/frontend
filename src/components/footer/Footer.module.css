@@ -1,7 +1,7 @@
 .container {
     flex-direction: column;
     gap: 24px;
-    background-color: #A7B5CC;
+    background-color: var(--black-color);
     padding: 24px 16px;
 }
 
@@ -10,11 +10,14 @@
     flex-direction: column;
     align-items: center;
     gap: 16px;
-    border-bottom: 3px solid #1a1a1a;
+    border-top: 3px solid var(--white-color);
+    border-bottom: 3px solid var(--white-color);
+    padding-top: 24px;
     padding-bottom: 24px;
 }
 
 .contacts_button {
+    color: var(--white-color);
     font-family: 'PassionOneBold';
     font-size: 20px;
     font-weight: 800;
@@ -28,12 +31,9 @@
 }
 
 .legal_button {
+    color: var(--white-color);
     font-size: 10px;
     font-weight: 600;
     text-transform: uppercase;
     cursor: pointer;
-}
-
-.contacts_button:hover, .legal_button:hover {
-    color: #fafafa
 }
