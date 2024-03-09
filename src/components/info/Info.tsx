@@ -1,10 +1,12 @@
-import React, {FC} from "react";
+import React from "react";
 
 import styles from './Info.module.css';
 import {getClassName} from "../../utils/style.utils";
-import {ChangeCursorVariantProps} from "../../hooks/use-cursor-variant.hook";
+import {useCursorVariant} from "../../hooks/cursor-variant/cursor-variant.hook";
 
-export const Info: FC<ChangeCursorVariantProps> = ({onMouseEnter, onMouseLeave}) => {
+export const Info = () => {
+    const {onMouseEnter, onMouseLeave} = useCursorVariant();
+
     return (
         <>
             <div className={styles.container}>

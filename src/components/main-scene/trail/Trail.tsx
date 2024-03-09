@@ -1,11 +1,13 @@
-import React, {FC, useCallback, useRef} from "react";
+import React, {useCallback, useRef} from "react";
 import styles from './Trail.module.css';
-import {useTrail, animated} from "@react-spring/web";
-import {ChangeCursorVariantProps} from "../../../hooks/use-cursor-variant.hook";
+import {animated, useTrail} from "@react-spring/web";
+import {useCursorVariant} from "../../../hooks/cursor-variant/cursor-variant.hook";
 
 const LETTERS = ['B', 'L', 'A', 'C', 'K', 'B', 'O', 'T'];
 
-export const Trail: FC<ChangeCursorVariantProps> = ({onMouseEnter, onMouseLeave}) => {
+export const Trail = () => {
+    const {onMouseEnter, onMouseLeave} = useCursorVariant();
+
     const [trail, api] = useTrail(
         LETTERS.length,
         () => (
@@ -28,12 +30,12 @@ export const Trail: FC<ChangeCursorVariantProps> = ({onMouseEnter, onMouseLeave}
     );
 
     return (
-        <div className={styles.container} onClick={handleClick}>
+        <div className={styles.container}
+             onClick={handleClick}
+             onMouseEnter={onMouseEnter}
+             onMouseLeave={onMouseLeave}>
             {trail.map(({rotateX}, i) => (
-                <div key={i}
-                     className={styles.box}
-                     onMouseEnter={onMouseEnter}
-                     onMouseLeave={onMouseLeave}>
+                <div key={i} className={styles.box}>
                     <animated.div
                         key={LETTERS[i]}
                         className={styles.box_front}

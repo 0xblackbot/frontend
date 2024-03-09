@@ -1,16 +1,15 @@
-import React, {FC, useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import {motion, Variants} from "framer-motion";
 import styles from "./Cursor.module.css";
 import {CursorTypeEnum} from "../../enums/cursor-type.enum";
-
-interface Props {
-    cursorVariant: CursorTypeEnum;
-}
+import {useCursorVariant} from "../../hooks/cursor-variant/cursor-variant.hook";
 
 const SMALL_SIZE = 32;
 const BIG_SIZE = 96;
 
-export const Cursor: FC<Props> = ({cursorVariant}) => {
+export const Cursor = () => {
+    const {cursorVariant} = useCursorVariant();
+
     const [mousePosition, setMousePosition] = useState({
         x: 0,
         y: 0

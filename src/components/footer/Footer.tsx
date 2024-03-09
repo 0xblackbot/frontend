@@ -1,14 +1,16 @@
-import React, {FC} from "react";
+import React from "react";
 
 import styles from './Footer.module.css';
-import {ChangeCursorVariantProps} from "../../hooks/use-cursor-variant.hook";
 import {getClassName} from "../../utils/style.utils";
+import {useCursorVariant} from "../../hooks/cursor-variant/cursor-variant.hook";
 
 // <p>Email: info.blackbot@gmail.com</p>
 // <p>Telegram: +380 68 809 2880</p>
 // <p>X: @0xblackbot</p>
 
-export const Footer: FC<ChangeCursorVariantProps> = ({onMouseEnter, onMouseLeave}) => {
+export const Footer = () => {
+    const {onMouseEnter, onMouseLeave}= useCursorVariant();
+
     return (
         <div className={styles.container}>
             <div className={styles.container_with_border}>
