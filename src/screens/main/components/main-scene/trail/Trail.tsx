@@ -1,7 +1,7 @@
 import React, {useCallback, useRef} from "react";
 import styles from './Trail.module.css';
 import {animated, useTrail} from "@react-spring/web";
-import {useCursorVariant} from "../../../hooks/cursor-variant/cursor-variant.hook";
+import {useCursorVariant} from "../../../../../hooks/cursor-variant/cursor-variant.hook";
 
 const LETTERS = ['B', 'L', 'A', 'C', 'K', 'B', 'O', 'T'];
 
@@ -26,7 +26,7 @@ export const Trail = () => {
                 isFlipped.current = true;
             }
         },
-        []
+        [api]
     );
 
     return (

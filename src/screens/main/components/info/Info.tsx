@@ -1,9 +1,9 @@
 import React from "react";
 
 import styles from './Info.module.css';
-import {getClassName} from "../../utils/style.utils";
-import {useCursorVariant} from "../../hooks/cursor-variant/cursor-variant.hook";
-import {CONTACTS_EMAIL, CONTACTS_TELEGRAM, CONTACTS_X} from "../../data";
+import {CONTACTS_EMAIL, CONTACTS_TELEGRAM, CONTACTS_X} from "../../../../data";
+import {useCursorVariant} from "../../../../hooks/cursor-variant/cursor-variant.hook";
+import {getClassName} from "../../../../utils/style.utils";
 
 const EMAIL_LINK = `mailto:${CONTACTS_EMAIL}`;
 const TELEGRAM_LINK = `https://t.me/${CONTACTS_TELEGRAM}`;
@@ -28,6 +28,7 @@ export const Info = () => {
                     <a className={styles.contacts_button}
                        href={EMAIL_LINK}
                        target="_blank"
+                       rel="noreferrer"
                        onMouseEnter={onMouseEnter}
                        onMouseLeave={onMouseLeave}>
                         Email
@@ -35,6 +36,7 @@ export const Info = () => {
                     <a className={styles.contacts_button}
                        href={TELEGRAM_LINK}
                        target="_blank"
+                       rel="noreferrer"
                        onMouseEnter={onMouseEnter}
                        onMouseLeave={onMouseLeave}>
                         Telegram
@@ -42,6 +44,7 @@ export const Info = () => {
                     <a className={styles.contacts_button}
                        href={X_LINK}
                        target="_blank"
+                       rel="noreferrer"
                        onMouseEnter={onMouseEnter}
                        onMouseLeave={onMouseLeave}>
                         X

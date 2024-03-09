@@ -1,23 +1,21 @@
 import React from 'react';
-import styles from './App.module.css';
-import {Footer} from './components/footer/Footer';
-import {Info} from "./components/info/Info";
-import {MainScene} from "./components/main-scene/MainScene";
-import {Cursor} from "./components/cursor/Cursor";
-import {CursorVariantProvider} from "./hooks/cursor-variant/cursor-variant.provider";
-import {isDesktop} from 'react-device-detect';
+import {createBrowserRouter, Route, RouterProvider, Routes} from "react-router-dom";
+import {MainScreen} from "./screens/main/main.screen";
+import {PrivacyPolicyScreen} from "./screens/privacy-policy/privacy-policy.screen";
+import {TermsAndConditionScreen} from "./screens/terms-and-conditions/terms-and-condition.screen";
+import {Layout} from "./components/layout/layout";
 
-function App() {
-    return (
-        <CursorVariantProvider>
-            <div className={styles.container}>
-                <MainScene/>
-                <Info/>
-                <Footer/>
-                {isDesktop && <Cursor/>}
-            </div>
-        </CursorVariantProvider>
-    );
-}
+const router = createBrowserRouter([
+    {
+        path: "/",
+        element: <Layout/>,
+        children: [
+            {path: "/", element: <MainScreen/>},
+            {path: "privacy-policy", element: <PrivacyPolicyScreen/>},
+            {path: "terms-and-conditions", element: <TermsAndConditionScreen/>},
+            {path: "*", element: <MainScreen/>},
+        ]
+    }
+]);
 
-export default App;
+export const App = () => (<RouterProvider router={router}/>);
