@@ -5,8 +5,7 @@ import {Info} from "./components/info/Info";
 import {MainScene} from "./components/main-scene/MainScene";
 import {Cursor} from "./components/cursor/Cursor";
 import {CursorVariantProvider} from "./hooks/cursor-variant/cursor-variant.provider";
-import {isDesktop, isMobile, isTablet} from 'react-device-detect';
-import {isBrowser} from "framer-motion";
+import {isDesktop} from 'react-device-detect';
 
 function App() {
     return (
