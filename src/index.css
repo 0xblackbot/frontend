@@ -3,11 +3,16 @@ body {
     height: 100%;
 }
 
+* {
+    cursor: none;
+}
+
 body {
     --black-color: #1a1a1a;
     --white-color: #fafafa;
     --yellow-color: #fbf588;
-    --blue-color: #61609a;
+    --blue-color: #00b1b2;
+    --red-colr: #c94245;
     --max-content-width: 632px;
 
     width: 100%;
