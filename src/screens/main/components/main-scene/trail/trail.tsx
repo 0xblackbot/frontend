@@ -1,5 +1,5 @@
 import {animated, useTrail} from "@react-spring/web";
-import React, {useCallback, useRef} from "react";
+import React, {useCallback, useEffect, useRef} from "react";
 
 import styles from './trail.module.css';
 import {useCursorVariant} from "../../../../../hooks/cursor-variant/cursor-variant.hook";
@@ -29,6 +29,15 @@ export const Trail = () => {
         },
         [api]
     );
+
+    useEffect(() => {
+        const timeoutId = setTimeout(() => {
+            api.start({ rotateX: 180 });
+            isFlipped.current = true;
+        }, 500);
+
+        return () => clearTimeout(timeoutId);
+    }, []);
 
     return (
         <div className={styles.container}
